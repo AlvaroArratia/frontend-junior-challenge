@@ -1,11 +1,5 @@
-export const serializeArrayObjById = (array) => {
-  const serializedArray = {};
-  array.forEach((element) => {
-    serializedArray[element.id] = element;
-  });
-  return serializedArray;
-};
+export const serializeArrayObjById = (array) =>
+  Object.fromEntries(array.map((item) => [item.id, item]));
 
-export const deserialize = (serializedData) => {
-  return Object.values(serializedData ?? {});
-};
+export const deserialize = (serializedData) =>
+  Object.values(serializedData ?? {});

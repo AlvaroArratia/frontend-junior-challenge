@@ -14,7 +14,7 @@ Lamentablemente esta app esta rota, asi que deberás crear, reparar e implementa
   - Marcar/desmarcar un TODO.
   - Eliminar un TODO.
   - Las llamadas a la API tambien deben hacerse mediante Redux (Thunks). El store debe ser capaz de obtener (GET), añadir (POST), editar (PATCH) y eliminar (DELETE) TODO's. Esta es la API: `https://my-json-server.typicode.com/AlvaroArratia/static-todos-api`.
-- Reparar la lista de TODO's, deben mostrarse los TODO's listados en columna y mostrar un mensaje cuando no hay TODO's. El componente de los items de la lista esta desarrollado, debes buscarlo.
+- Reparar la lista de TODO's, deben mostrarse los TODO's listados en columna y mostrar el mensaje `Looks like you&apos;re absolutely free today!` cuando no hay TODO's. El componente de los items de la lista esta desarrollado y puedes encontrarlo en la ruta `src/components/TodoListItem`.
 - Reparar el contador de TODO's terminadas.
 - Crear el componente TodoForm, basandote en los diseños entregados, para agregar nuevas TODO a la lista.
 - Crear una notificación para el usuario cuando fallen las llamadas a la API. Para eso debes implementar algún toast o snackbar para mostrar el error. Puedes usar alguna libreria como https://fkhadra.github.io/react-toastify/introduction/ u otra que prefieras, o crear el componente desde cero asi como tambien el diseño de este (diseño a tu criterio).
