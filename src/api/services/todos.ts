@@ -31,8 +31,9 @@ const toggleTodo = async (id: number): Promise<ITodo> => {
   return updateTodo(id, updatedTodo);
 };
 
-const deleteTodo = async (id: number): Promise<void> => {
+const deleteTodo = async (id: number): Promise<number> => {
   await axiosConfig.delete(endpoints.todos.delete(id));
+  return id;
 };
 
 export const todosService = { getTodos, createTodo, toggleTodo, deleteTodo };
