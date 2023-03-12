@@ -37,7 +37,11 @@ const todoSlice = createSlice({
       state.loading = 'loading';
     },
     [actions.addTodo.fulfilled.type]: (state, action: PayloadAction<ITodo>) => {
-      state.todos = [...state.todos, action.payload];
+      const { label } = action.payload;
+      const todoIds = state.todos.map(todo => todo.id);
+      const id = Math.max(...todoIds) + 1;
+      const newTodo = { id, label, checked: false };
+      state.todos = [...state.todos, newTodo];
       state.loading = 'idle';
     },
     [actions.addTodo.rejected.type]: state => {
