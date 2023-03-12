@@ -13,3 +13,6 @@ export type TodoListItemProps = {
   onCheck: () => void;
   onDelete: () => void;
 };
+
+export type TCreateTodo = Omit<ITodo, 'id'>;
+export type TUpdateTodo = Partial<Omit<ITodo, 'id'>>;
