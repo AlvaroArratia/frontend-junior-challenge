@@ -35,4 +35,4 @@ const deleteTodo = async (id: number): Promise<void> => {
   await axiosConfig.delete(endpoints.todos.delete(id));
 };
 
-export { getTodos, createTodo, toggleTodo, deleteTodo };
+export const todosService = { getTodos, createTodo, toggleTodo, deleteTodo };
