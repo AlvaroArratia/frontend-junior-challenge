@@ -1,5 +1,4 @@
-import React from "react";
-import "./styles.css";
+import './styles.css';
 
 const TodoResults = () => {
   // Fix an ability to calculate completed tasks
