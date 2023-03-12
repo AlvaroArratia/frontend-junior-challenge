@@ -1,11 +1,5 @@
+import { TodoListItemProps } from '@types';
 import './styles.css';
-
-interface TodoListItemProps {
-  onCheck: () => void;
-  checked: boolean;
-  onDelete: () => void;
-  label: string;
-}
 
 const TodoListItem = ({ onCheck, checked, onDelete, label }: TodoListItemProps) => (
   <div className="todo-list-item">
