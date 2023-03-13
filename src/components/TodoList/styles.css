@@ -17,6 +17,14 @@
 .todo-list-content {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+
+.todo-list-error {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  color: red;
 }
 
 .no-todos {
