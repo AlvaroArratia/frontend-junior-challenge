@@ -24,7 +24,7 @@ const App: FC = () => {
       <TodoResults />
       <TodoForm />
 
-      <ToastContainer pauseOnFocusLoss={false} />
+      <ToastContainer pauseOnFocusLoss={false} pauseOnHover={false} />
     </div>
   );
 };
