@@ -3,7 +3,8 @@ import { toast } from 'react-toastify';
 import Spinner from 'components/Spinner';
 import TodoListItem from 'components/TodoListItem';
 import { useAppDispatch, useAppSelector } from 'hooks/useStore';
-import { actions } from 'state/reducers/todos/todoActions';
+import actions from 'state/reducers/todos/todoActions';
+
 import './styles.css';
 
 const TodoList = () => {

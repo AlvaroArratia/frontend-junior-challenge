@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import { useAppDispatch } from 'hooks/useStore';
-import { actions } from 'state/reducers/todos/todoActions';
 import { toast } from 'react-toastify';
+import { useAppDispatch } from 'hooks/useStore';
+import actions from 'state/reducers/todos/todoActions';
+
+import './styles.css';
 
 const TodoForm = () => {
   const newTodoRef = useRef<HTMLInputElement>(null);

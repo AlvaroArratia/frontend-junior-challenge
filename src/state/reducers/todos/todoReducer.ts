@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
-import { actions } from './todoActions';
+import actions from './todoActions';
 import NAME_REDUCER from 'state/constants';
 
 import { TFulfilledAction, TPendingAction, TRejectedAction } from 'state/types/storeTypes';
