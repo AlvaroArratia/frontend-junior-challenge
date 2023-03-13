@@ -7,7 +7,7 @@ import TodoResults from 'components/TodoResults';
 import TodoForm from 'components/TodoForm';
 
 import { useAppDispatch } from 'hooks/useStore';
-import { actions } from 'state/reducers/todos/todoActions';
+import actions from 'state/reducers/todos/todoActions';
 
 import './App.css';
 
