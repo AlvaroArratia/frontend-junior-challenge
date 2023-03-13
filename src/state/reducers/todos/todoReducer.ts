@@ -64,9 +64,10 @@ const todoSlice = createSlice({
     // Match any action that ends in '/rejected'
     builder.addMatcher<TRejectedAction>(
       (action): action is TRejectedAction => action.type.endsWith('/rejected'),
-      state => {
+      (state, action) => {
+        const status = action.error.code === 'ERR_BAD_REQUEST' ? 404 : 500;
         state.loading = 'failed';
-        state.error = state.error || 'Something went wrong. The API is read-only.';
+        state.error = `[${action.error.name}]: Request failed with status ${status}. Remember that the API is read-only.`;
       },
     );
 

@@ -19,7 +19,7 @@ const TodoList = () => {
 
       toast.success('Task was deleted successfully', { icon: '🗑️' });
     } catch (error) {
-      toast.error('Something went wrong');
+      toast.error('API is read-only.', { bodyStyle: { color: '#EF5350' } });
     }
   };
 
@@ -31,7 +31,7 @@ const TodoList = () => {
 
       toast.success('Task was updated successfully', { icon: '✅' });
     } catch (error) {
-      toast.error('Something went wrong');
+      toast.error('API is read-only.', { bodyStyle: { color: '#EF5350' } });
     }
   };
 
@@ -51,7 +51,7 @@ const TodoList = () => {
         {error && <span className="todo-list-error">{error}</span>}
       </div>
 
-      {todos.length <= 0 && <div className="no-todos">Looks like you&apos;re absolutely free today!</div>}
+      {!error && todos.length <= 0 && <small className="no-todos">Looks like you&apos;re absolutely free today!</small>}
     </div>
   );
 };
