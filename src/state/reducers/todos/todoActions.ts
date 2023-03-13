@@ -1,15 +1,30 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import actionType from './actionTypes';
-import type { ITodo } from 'state/types/todosTypes';
 
-// TODO: Add types to the async functions
+import { todosService } from 'api/services/todos';
+import type { ITodo, TCreateTodo, TDeleteTodo, TToggleTodo } from '@types';
 
-const getTodos = createAsyncThunk(actionType.getTodos, async () => {});
+const getTodos = createAsyncThunk<ITodo[]>(actionType.GET_TODO, async () => {
+  const todos = await todosService.getTodos();
+  return todos;
+});
 
-const addTodo = createAsyncThunk(actionType.addTodo, async (todo: ITodo) => {});
+const addTodo = createAsyncThunk<ITodo, TCreateTodo>(actionType.ADD_TODO, async ({ label, checked }) => {
+  const newTodo = await todosService.createTodo({
+    label,
+    checked,
+  });
+  return newTodo;
+});
 
-const toggleTodo = createAsyncThunk(actionType.toggleTodo, async (id: number) => {});
+const toggleTodo = createAsyncThunk<ITodo, TToggleTodo>(actionType.TOGGLE_TODO, async ({ id, checked }) => {
+  const todo = await todosService.toggleTodo(id, checked);
+  return todo;
+});
 
-const deleteTodo = createAsyncThunk(actionType.deleteTodo, async (id: number) => {});
+const deleteTodo = createAsyncThunk<number, TDeleteTodo>(actionType.DELETE_TODO, async ({ id }) => {
+  await todosService.deleteTodo(id);
+  return id;
+});
 
 export const actions = { getTodos, addTodo, toggleTodo, deleteTodo };
