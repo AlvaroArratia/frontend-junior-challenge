@@ -1,5 +1,5 @@
 import axiosConfig from 'api/axiosConfig';
-import { endpoints } from 'api/endpoints';
+import endpoints from 'api/endpoints';
 import type { ITodo, TCreateTodo } from '@types';
 
 // Functions for working with the API
