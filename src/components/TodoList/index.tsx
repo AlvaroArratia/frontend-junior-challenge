@@ -48,10 +48,10 @@ const TodoList = () => {
           />
         ))}
         {loading === 'loading' && <Spinner />}
-        {error && <span className="todo-list-error">{error}</span>}
+        {error && <small className="todo-list-error">{error}</small>}
       </div>
 
-      {!error && todos.length <= 0 && <small className="no-todos">Looks like you&apos;re absolutely free today!</small>}
+      {!error && todos.length <= 0 && <div className="no-todos">Looks like you&apos;re absolutely free today!</div>}
     </div>
   );
 };
