@@ -1,4 +1,4 @@
-const API_URL = 'https://my-json-server.typicode.com/AlvaroArratia/static-todos-api' as string;
+import { API_URL } from './constants';
 
 const endpoints = {
   todos: {
@@ -10,4 +10,4 @@ const endpoints = {
   },
 };
 
-export { endpoints };
+export default endpoints;
