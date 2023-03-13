@@ -22,23 +22,34 @@ const TodoForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!label) return;
+    if (!label) return toast.error('Please enter a To-Do');
 
     try {
       await dispatch(actions.addTodo({ label, checked: false }));
-      toast.success('Task added successfully', { icon: '📝' });
+      toast.success('To-Do added successfully', { icon: '📝' });
     } catch (error) {
-      toast.error('Something went wrong');
+      toast.error('Something went wrong', { bodyStyle: { color: '#EF5350' } });
     }
 
     setLabel('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={label} onChange={handleLabelChange} placeholder="Enter a new todo" ref={newTodoRef} />
+    <form className="todo-form" onSubmit={handleSubmit}>
+      <div className="todo-form-content">
+        <input
+          className="todo-form-field"
+          type="text"
+          value={label}
+          onChange={handleLabelChange}
+          placeholder="Enter a new todo"
+          ref={newTodoRef}
+        />
 
-      <button type="submit">ADD TO DO</button>
+        <button className="todo-form-button" type="submit">
+          ADD TO DO
+        </button>
+      </div>
     </form>
   );
 };
