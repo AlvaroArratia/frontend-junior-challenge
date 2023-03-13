@@ -1,4 +1,4 @@
-import { TodoListItemProps } from '@types';
+import type { TodoListItemProps } from '@types';
 import './styles.css';
 
 const TodoListItem = ({ onCheck, checked, onDelete, label }: TodoListItemProps) => (

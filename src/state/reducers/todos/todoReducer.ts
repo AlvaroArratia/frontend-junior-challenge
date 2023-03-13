@@ -3,7 +3,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import actions from './todoActions';
 import NAME_REDUCER from 'state/constants';
 
-import { TFulfilledAction, TPendingAction, TRejectedAction } from 'state/types/storeTypes';
+import type { TFulfilledAction, TPendingAction, TRejectedAction } from 'state/types/storeTypes';
 import type { ITodo, ITodoState } from '@types';
 
 const initialState: ITodoState = {
