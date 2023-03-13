@@ -27,4 +27,6 @@ const deleteTodo = createAsyncThunk<number, TDeleteTodo>(actionType.DELETE_TODO,
   return id;
 });
 
-export const actions = { getTodos, addTodo, toggleTodo, deleteTodo };
+const actions = { getTodos, addTodo, toggleTodo, deleteTodo };
+
+export default actions;
