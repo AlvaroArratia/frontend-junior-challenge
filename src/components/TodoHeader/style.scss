@@ -1,0 +1,24 @@
+
+.todo-header {
+    min-height: 20rem;
+    // background-color: #378aff;
+  
+    &__img {
+      background-image: url("https://img.freepik.com/free-photo/blank-list-planner-with-checklist-black-pen-white-background-close-up_211682-100.jpg?w=1060&t=st=1678904112~exp=1678904712~hmac=9d1c64c947baa40172243a87c25b98debbf85f0c0db9c8efed82197250c16383");
+      width: fit-content;
+      min-height: 20rem;
+      width: 100%;
+      background-size: cover;
+      opacity: 40%;
+      border-radius: 15px 15px 0 0;
+    }
+    &__text {
+      position: absolute;
+      width: 440px;
+      top: 30px;
+      margin-left: 90px;
+      font-weight: 600;
+      font-size: 7rem;
+      color: #537FE7;
+    }
+  }

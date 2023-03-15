@@ -1,0 +1,16 @@
+.todo-results {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  color: cadetblue;
+  padding: 15px 0;
+  margin-bottom: 10px;
+
+  &__total {
+    color:#1677ff;
+    font-weight: 500;
+    font-size: x-large;
+  }
+}

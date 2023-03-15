@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": "f08818a9-8c24-46c8-8126-cbdbd7c54c1d",
+      "label": "Work hard",
+      "checked": false
+    },
+    {
+      "id": "052df0b1-72c9-478e-81a6-071b286fa29e",
+      "label": "Discipline",
+      "checked": true
+    },
+    {
+      "id": "05100d43-3e69-4bce-80b2-db4288ece162",
+      "label": "Study",
+      "checked": false
+    },
+    {
+      "id": "6bd384ae-62a3-4587-bd3d-70d48fb1c7e8",
+      "label": "Learn and Execute",
+      "checked": true
+    },
+    {
+      "id": "954c3fe5-dd5f-4794-bbb7-6a92f82b7dbc",
+      "label": "Never give up!!!!",
+      "checked": true
+    },
+    {
+      "id": "dbdf11bb-5790-4fbe-b18f-c2d40ec78943",
+      "label": "plpl",
+      "checked": false
+    }
+  ]
+}
