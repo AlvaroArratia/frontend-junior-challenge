@@ -17,11 +17,7 @@
 .todo-list-content {
   display: flex;
   justify-content: center;
-}
-
-.no-todos {
-  text-align: center;
-  padding: 5px 0;
-  font-size: 14px;
-  color: gray;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px 0px;
 }

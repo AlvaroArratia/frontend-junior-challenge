@@ -1,0 +1,42 @@
+.helper-container {
+  border: none;
+
+  // color: aliceblue;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: fit-content;
+  height: fit-content;
+  padding: 40px 30px;
+  border-radius: 5px;
+  box-shadow: 5px 15px 25px rgba(#0000, 0.4);
+  // position: absolute;
+
+  &__action-modal {
+    position: absolute;
+    .action-modal_button {
+      position: relative;
+      top: 50px;
+    }
+  }
+
+  span {
+    color: aliceblue;
+  }
+
+  &.info {
+    background-color: rgb(#48a4ff, 1);
+    box-shadow: 5px 15px 25px rgb(#1677ff, 0.4);
+  }
+
+  &.error {
+    background-color: rgb(#e64848, 1);
+    box-shadow: 5px 15px 25px rgb(#fe3a3a00, 0.4);
+  }
+
+  &.success {
+    background-color: rgb(#5772fb00, 0.9);
+    box-shadow: 5px 15px 25px rgb(#5772fb00, 0.4);
+  }
+}

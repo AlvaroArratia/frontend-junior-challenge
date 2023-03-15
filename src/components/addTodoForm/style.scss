@@ -1,0 +1,45 @@
+.add-todo-container {
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    // gap: 5px;
+    border: 1px solid #48a4ff;
+    border-radius: 8px;
+    box-shadow: 9px 9px 14px rgb(#1677ff, 0.4);
+    transition: all ease-in 2s;
+    &:hover {
+      box-shadow: 9px 9px 14px rgb(#1677ff, 0.9);
+    }
+    &__input {
+      border: none;
+      background-color: transparent;
+      padding: 10px 15px;
+      width: 100%;
+      &:focus {
+        outline: none;
+        //   border: 1px solid #1677ff;
+      }
+    }
+  }
+}
+
+input {
+  &.btn {
+    color: #fff;
+    background-color: #1677ff;
+    box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      box-shadow: 0px 0px 8px rgb(#1677ff, 0.9);
+    }
+    &:disabled {
+      background-color: #48a4ff;
+      pointer-events: none;
+    }
+  }
+}
